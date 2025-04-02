@@ -3,14 +3,15 @@ function ChatResponse({ response }) {
     return null;
   }
   const { candidates, usageMetadata } = response;
+
   return (
     <div className="container my-4">
       <h3>Response</h3>
       {candidates.map((candidate, index) => (
-        <div class="card mb-3" key={index}>
-          <div class="card-body">
-            <h5 class="card-title">Candidate {index + 1}</h5>
-            <p class="card-text">{candidate.content.parts[0].text}</p>
+        <div className="card mb-3" key={index}>
+          <div className="card-body">
+            <h5 className="card-title">Candidate {index + 1}</h5>
+            <p className="card-text">{candidate.content.parts[0].text}</p>
             <h6>
               Citations :
               <u>
